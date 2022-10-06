@@ -1,24 +1,18 @@
-# README
+# blog-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Screenshot](./app/assets/images/screenshot_1.png)
 
-Things you may want to cover:
+![Screenshot](./app/assets/images/screenshot_2.png)
 
-* Ruby version
+A Ruby on Rails application that allows the user to articles.
 
-* System dependencies
+## Tech Stack
 
-* Configuration
+- Ruby on Rails
+- Bootstrap
 
-* Database creation
+## Features
 
-* Database initialization
+- Create articles
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Live Demo:
