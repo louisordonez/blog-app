@@ -4,7 +4,7 @@
 
 ![Screenshot](./app/assets/images/screenshot_2.png)
 
-A Ruby on Rails application that allows the user to articles.
+A Ruby on Rails application that allows the user to add articles.
 
 ## Tech Stack
 
