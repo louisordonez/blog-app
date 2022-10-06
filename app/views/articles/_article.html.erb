@@ -1,0 +1,18 @@
+<div class="mt-5" style="display: block;">
+  <div style="position: absolute; right: .5rem;">
+    <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-primary" %>
+    <%= link_to 'Delete', @article, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+  </div>
+</div>
+<div class="d-flex align-items-center justify-content-center">
+  <div class="w-75 mt-5">
+    <div>
+      <h1 class="m-2"><%= @article.title %></h1>
+    </div>
+    <div class="border rounded mt-4">
+      <p class="m-4">
+        <%= @article.body %>
+      </p>
+    </div>
+  </div>
+</div>

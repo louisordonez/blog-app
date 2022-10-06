@@ -1,0 +1,39 @@
+<h1 class="m-2">Articles</h1>
+<div class="mt-2" style="display: block;">
+  <div style="position: absolute; right: .5rem;">
+    <%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
+  </div>
+</div>
+<div class="d-flex align-items-center justify-content-center">
+  <div class="w-75 mt-5">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @article.each do |article| %>
+          <tr>
+            <td class="align-middle"><%= article.id %></td>
+            <td class="align-middle"><%= article.title %></td>
+            <td class="align-middle text-center">
+              <div class="dropdown">
+                <a class="btn btn-outline-dark" href role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-three-dots"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to 'View', article, class: "dropdown-item" %></li>
+                  <li><%= link_to 'Edit', edit_article_path(article), class: "dropdown-item" %></li>
+                  <li><%= link_to 'Delete', article, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "dropdown-item text-danger" %></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
