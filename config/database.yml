@@ -24,8 +24,8 @@
 
 default: &default
   adapter: cockroachdb
-  url: <%= Rails.application.credentials.dig(:cockroachdb, :url) %>
-  sslrootcert: "./root.crt"
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 
 development:
   adapter: postgresql
@@ -94,6 +94,6 @@ test:
 #   password: <%= ENV["BLOG_APP_DATABASE_PASSWORD"] %>
 
 production:
-  adapter: cockroachdb
+  <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   sslrootcert: "./root.crt"
