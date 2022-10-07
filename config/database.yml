@@ -25,7 +25,7 @@
 default: &default
   adapter: cockroachdb
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  sslrootcert: "./root.crt"
 
 development:
   adapter: postgresql
@@ -96,4 +96,3 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  sslrootcert: "./root.crt"
