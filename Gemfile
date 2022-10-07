@@ -76,3 +76,5 @@ gem "cssbundling-rails", "~> 1.1"
 gem "prettier"
 
 gem "hotwire-livereload", "~> 1.2"
+
+gem 'activerecord-cockroachdb-adapter', '~> 7.0.0'
