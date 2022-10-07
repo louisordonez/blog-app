@@ -13,6 +13,6 @@ A Ruby on Rails application that allows the user to add articles.
 
 ## Features
 
-- Create articles
+- Create, edit, and delete articles
 
-### Live Demo:
+### Live Demo: https://blog-app-fb1s.onrender.com
